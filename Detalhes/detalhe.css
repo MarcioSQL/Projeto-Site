@@ -1,0 +1,75 @@
+nav {
+    background-color: aquamarine;
+    /* define a cor de fundo do menu */
+
+    display: flex;
+    /* ativa o layout flexível (Flexbox) */
+
+    justify-content: space-around;
+    /* distribui os links com espaço ao redor */
+
+    align-items: center;
+    /* alinha os itens verticalmente no centro */
+
+    padding: 25px;
+    /* espaço interno (topo, baixo, esquerda, direita) */
+
+    border-radius: 10px;
+    /* arredonda os cantos do nav */
+
+    text-decoration: none;
+    /* NÃO funciona aqui para links (ver observação abaixo) */
+}
+
+/* CORRETO → aplicar nos links */
+nav a {
+    text-decoration: none;
+    /* remove o underline dos links */
+    color: green;
+    /* define a cor do texto */
+}
+
+.container {
+    background-color: lightslategrey;
+    display: flex;
+    /* ativa o flex */
+    flex-direction: list-item;
+    /* coloca um abaixo do outro */
+
+    justify-content: center;
+    /* centraliza vertical */
+    align-items: center;
+    /* centraliza horizontal */
+    margin-top: 5px;
+    /*espaço acima */
+    border: none;
+    border-radius: 20px;
+    padding: 2%
+}
+
+
+
+
+#imagem  {
+    width: 40%;
+    /* tamanho da imagem */
+    height: 30%;
+    display: block;
+    /* permite centralizar */
+
+
+}
+
+/* container dos cards */
+.cards {
+    display: inline-flex;
+    /* ativa Flexbox */
+    flex-direction: row-reverse;
+    /* coloca os cards em coluna (um abaixo do outro) */
+    gap: 15px;
+    /* espaço entre os cards */
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+
+}

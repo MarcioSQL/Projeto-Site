@@ -1,0 +1,22 @@
+nav {
+    background-color: aquamarine; /* define a cor de fundo do menu */
+    
+    display: flex;                /* ativa o layout flexível (Flexbox) */
+    
+    justify-content: space-around; /* distribui os links com espaço ao redor */
+    
+    align-items: center;         /* alinha os itens verticalmente no centro */
+    
+    padding: 25px;               /* espaço interno (topo, baixo, esquerda, direita) */
+    
+    border-radius: 10px;         /* arredonda os cantos do nav */
+    
+    text-decoration: none;       /* NÃO funciona aqui para links (ver observação abaixo) */
+}
+
+/* CORRETO → aplicar nos links */
+nav a {
+    text-decoration: none;       /* remove o underline dos links */
+    color: green;                /* define a cor do texto */
+}
+

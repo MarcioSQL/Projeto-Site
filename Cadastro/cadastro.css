@@ -1,0 +1,77 @@
+
+nav {
+    background-color: aquamarine; /* define a cor de fundo do menu */
+    
+    display: flex;                /* ativa o layout flexível (Flexbox) */
+    
+    justify-content: space-around; /* distribui os links com espaço ao redor */
+    
+    align-items: center;         /* alinha os itens verticalmente no centro */
+    
+    padding: 15px;               /* espaço interno (topo, baixo, esquerda, direita) */
+    
+    border-radius: 10px;         /* arredonda os cantos do nav */
+    
+    text-decoration: none;       /* NÃO funciona aqui para links (ver observação abaixo) */
+}
+
+/* CORRETO → aplicar nos links */
+nav a {
+    text-decoration: none;       /* remove o underline dos links */
+    color: green;                /* define a cor do texto */
+}
+
+.container {
+    background-color: lightslategrey;
+    display: flex;           /* ativa o flex */
+    flex-direction: column;  /* coloca um abaixo do outro */
+
+    justify-content: center; /* centraliza vertical */
+    align-items: center;     /* centraliza horizontal */
+
+    gap: 20px;               /* espaço entre os elementos */
+     margin-top: 5px;        /*espaço acima */
+
+    border: none;
+    border-radius: 20px;
+    padding: 2% 
+}
+
+form {
+    display: flex;              /* ativa flex */
+    flex-direction: column;     /* coloca um abaixo do outro */
+    align-items: start;        /* Posiciona itens a partir do início */
+    gap: 10px;                  /* espaço entre campos */
+}
+
+.card img {
+    width: 150px;        /* tamanho da imagem */
+    display: block;      /* permite centralizar */
+    margin: 0 auto 20px; /* centraliza + espaço abaixo */
+    float: right;
+}
+
+.campo {
+    display: flex;          /* coloca lado a lado */
+    align-items: center;    /* alinha verticalmente */
+    justify-content: center;/* mantém centralizado na tela */
+    gap: 10px;              /* espaço entre label e input */
+}
+
+label {
+    width: 100px;           /* largura fixa (alinha todos) */
+     text-align: start;       /* texto encostado no input */
+}
+
+input {
+    width: 350px;           /* tamanho dos inputs */
+    padding: 6px;
+}
+
+button {
+     width: 100%;           /* 100% do container, tamanho dos botões */
+    padding: 6px;
+    background-color: lightsalmon;
+    border: none;
+    border-radius: 10px;
+}

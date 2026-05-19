@@ -1,0 +1,77 @@
+body {
+    display: flex;              /* transforma o body em um container flexível */
+    flex-direction: column;     /* organiza os elementos na vertical (um abaixo do outro) */
+    gap: 20px;                  /* cria espaço automático entre todos os elementos filhos */
+  
+}
+
+
+nav {
+    background-color: aquamarine; /* define a cor de fundo do menu */
+    
+    display: flex;                /* ativa o layout flexível (Flexbox) */
+    
+    justify-content: space-around; /* distribui os links com espaço ao redor */
+    
+    align-items: center;         /* alinha os itens verticalmente no centro */
+    
+    padding: 18px;               /* espaço interno (topo, baixo, esquerda, direita) */
+    
+    border-radius: 10px;         /* arredonda os cantos do nav */
+    
+    text-decoration: none;       /* NÃO funciona aqui para links (ver observação abaixo) */
+}
+
+/* CORRETO → aplicar nos links */
+nav a {
+    text-decoration: none;       /* remove o underline dos links */
+    color: green;                /* define a cor do texto */
+}
+
+
+.container {
+    background-color: lightslategrey;
+    display: flex;           /* ativa o flex */
+    flex-direction: column;  /* coloca um abaixo do outro */
+
+    justify-content: center; /* centraliza vertical */
+    align-items: center;     /* centraliza horizontal */
+
+    gap: 20px;               /* espaço entre os elementos */
+    margin-top: 20px;        /* espaço acima */
+
+    border: none;
+    border-radius: 20px;
+    padding: 12% 
+}
+
+form {
+    display: flex;              /* ativa flex */
+    flex-direction: column;     /* coloca um abaixo do outro */
+    align-items: start;        /* Posiciona itens a partir do início */
+    gap: 10px;                  /* espaço entre campos */
+}
+
+
+label {
+    width: 100px;           /* largura fixa (alinha todos) */
+     text-align: start;       /* texto encostado no input */
+}
+
+input {
+    width: 350px;           /* tamanho dos inputs */
+    padding: 6px;
+}
+
+button {
+    width: 100%;           /* 100% do container, tamanho dos botões */
+    padding: 6px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 10px;
+}
+footer{
+    background-color: aquamarine;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;}

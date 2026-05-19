@@ -1,0 +1,82 @@
+body {
+    display: flex;              /* transforma o body em um container flexível */
+    flex-direction: column;     /* organiza os elementos na vertical (um abaixo do outro) */
+    gap: 20px;                  /* cria espaço automático entre todos os elementos filhos */
+}
+
+a {
+    text-decoration: none;        /* remove sublinhado dos links */
+    color: black;               /* define a cor do texto como preto */
+}
+
+nav {
+    background-color: lightskyblue; /* cor de fundo do menu */
+    display: flex;                    /* ativa o Flexbox */
+    align-items: center;              /*alinha os itens verticalmente no centro */
+    padding: 10px;                    /* espaçamento interno */
+    border-radius: 10px;              /* bordas arredondadas */
+    gap: 40px;                        /* espaço entre os itens dentro do nav */
+    margin-bottom: 20px;              /* espaço abaixo do nav (separa do conteúdo) */
+     text-align: center;
+     justify-content: center;
+}
+
+   
+h1 {
+    display: flex;                       /* torna o título flexível */
+     justify-content: space-around;  /* (comentado) distribuiria elementos horizontalmente */
+    align-items: center;                 /* centraliza verticalmente (caso tenha mais elementos dentro) */
+     text-align: center;
+     justify-content: center;
+}
+
+h3{
+ justify-content: center;
+
+}
+
+section {
+    background-color: aquamarine; /* cor de fundo da seção */
+    display: flex;                  /* ativa layout flexível */
+    justify-content: space-around;  /* distribui os elementos com espaço ao redor */
+    align-items: center;            /* alinha verticalmente ao centro */
+    padding: 10px;                  /* espaçamento interno */
+    border-radius: 10px;            /* bordas arredondadas */
+    justify-content: center;
+}
+
+.container {
+    display: flex;               /* Define o container como flexível, permitindo organizar os elementos filhos em linha ou coluna */
+    align-items: flex-start;     /* Alinha os itens pelo topo do container (início do eixo cruzado) */
+    gap: 40px;                   /* Cria um espaço de 40px entre os elementos filhos (imagem e cards) */
+    margin-top: 20px;            /* Adiciona um espaço de 20px acima do container */
+    float: right;                /* Faz o container "flutuar" à direita dentro do elemento pai */
+    flex-direction: row-reverse; /* Inverte a ordem dos elementos, colocando-os da direita para a esquerda */
+}
+
+/* imagem */
+.imagem img {
+    width: 750px;             /* define a largura da imagem */
+    float: right;
+}
+    
+/* container dos cards */
+.cards {
+    display: flex;            /* ativa Flexbox */
+    flex-direction: column;   /* coloca os cards em coluna (um abaixo do outro) */
+    gap: 15px;                /* espaço entre os cards */
+}
+
+/* cada card */
+.card {
+    background-color: #e06b6b; /* cor de fundo do card */
+    padding: 8px;             /* espaçamento interno */
+    border-radius: 10px;         /* bordas arredondadas */
+    width: 650px;                /* largura fixa do card */
+    text-align: center;          /* centraliza o texto dentro do card */
+}
+
+
+
+
+
