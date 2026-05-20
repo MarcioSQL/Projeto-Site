@@ -38,7 +38,7 @@ h3{
 section {
     background-color: aquamarine; /* cor de fundo da seção */
     display: flex;                  /* ativa layout flexível */
-    justify-content: space-around;  /* distribui os elementos com espaço ao redor */
+    justify-content: space-between;  /* distribui os elementos com espaço ao redor */
     align-items: center;            /* alinha verticalmente ao centro */
     padding: 10px;                  /* espaçamento interno */
     border-radius: 10px;            /* bordas arredondadas */
@@ -55,9 +55,24 @@ section {
 }
 
 /* imagem */
-.imagem img {
-    width: 750px;             /* define a largura da imagem */
-    float: right;
+#imagem {
+    
+    float: left;
+    background-image: url("./Imagem/Ar.webp");
+    width: 300%;
+     height: auto;           /* Define a altura do banner como "auto" para que ele se adapte ao conteúdo */
+    /* Responsividade */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Centralização do conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding:45%;
 }
     
 /* container dos cards */
@@ -70,13 +85,82 @@ section {
 /* cada card */
 .card {
     background-color: #e06b6b; /* cor de fundo do card */
-    padding: 8px;             /* espaçamento interno */
+    padding: 20px;             /* espaçamento interno */
     border-radius: 10px;         /* bordas arredondadas */
-    width: 650px;                /* largura fixa do card */
+    width: 400px;;                /* largura fixa do card */
     text-align: center;          /* centraliza o texto dentro do card */
 }
 
+/* ================== Responsividade ============================== */
 
+#celular {
+    display: block;/*Mostra conteúdo para celular.  */
 
+}
 
+#Tablet {
+    display: none;/*Esconde conteúdo para tablet.  */
 
+}
+
+#PC {
+
+    display: none;/* Esconde conteúdo para PC. */
+}
+
+@media (min-width:360px) {
+
+    body {
+     /* Muda fundo para lightslategray.*/
+        background-color: lightslategray;
+
+    }
+/* Esconde Tablet e PC*/
+    #Tablet,
+    #PC {
+ /* mostra só celular.   */
+        display: none;
+    }
+
+}
+
+@media (min-width:768px) {
+   
+    body {
+         /*Fundo vira lightyellow.*/
+        background-color: lightyellow;
+    }
+  /* Esconde celular e PC*/
+    #celular,
+    #PC {
+
+        display: none;
+
+    }
+  /* mostra Tablet.*/
+    #Tablet {
+
+        display: block;
+    }
+}
+
+@media (min-width:1024px) {
+/*Fundo vira thistle (roxo claro).*/
+    body {
+
+        background-color: thistle;
+    }
+   /* Esconde celular e Tablet*/
+    #celular,
+    #Tablet {
+
+        display: none;
+
+    }
+   /*  mostra PC. */ 
+       #PC {
+
+        display: block;
+    }
+
+}

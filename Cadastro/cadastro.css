@@ -70,8 +70,82 @@ input {
 
 button {
      width: 100%;           /* 100% do container, tamanho dos botões */
-    padding: 6px;
+    padding: 16px;
     background-color: lightsalmon;
     border: none;
     border-radius: 10px;
+}
+
+/* ================== Responsividade ============================== */
+
+#celular {
+    display: block;/*Mostra conteúdo para celular.  */
+
+}
+
+#Tablet {
+    display: none;/*Esconde conteúdo para tablet.  */
+
+}
+
+#PC {
+
+    display: none;/* Esconde conteúdo para PC. */
+}
+
+@media (min-width:360px) {
+
+    body {
+     /* Muda fundo para lightslategray.*/
+        background-color: lightslategray;
+
+    }
+/* Esconde Tablet e PC*/
+    #Tablet,
+    #PC {
+ /* mostra só celular.   */
+        display: none;
+    }
+
+}
+
+@media (min-width:768px) {
+   
+    body {
+         /*Fundo vira lightyellow.*/
+        background-color: lightyellow;
+    }
+  /* Esconde celular e PC*/
+    #celular,
+    #PC {
+
+        display: none;
+
+    }
+  /* mostra Tablet.*/
+    #Tablet {
+
+        display: block;
+    }
+}
+
+@media (min-width:1024px) {
+/*Fundo vira thistle (roxo claro).*/
+    body {
+
+        background-color: thistle;
+    }
+   /* Esconde celular e Tablet*/
+    #celular,
+    #Tablet {
+
+        display: none;
+
+    }
+   /*  mostra PC. */ 
+       #PC {
+
+        display: block;
+    }
+
 }

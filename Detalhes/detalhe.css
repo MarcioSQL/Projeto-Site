@@ -47,18 +47,32 @@ nav a {
     padding: 2%
 }
 
-
-
-
-#imagem  {
-    width: 40%;
-    /* tamanho da imagem */
-    height: 30%;
-    display: block;
-    /* permite centralizar */
-
-
+#imagem {
+    /* Ocupa toda a largura disponível sem estourar a tela */
+    width: 200%;
+    
+    /* Define uma altura fixa ou dinâmica para o banner aparecer */
+    height: 60% ; /* 60% da altura da tela (ajuste como preferir) */
+    
+    /* Garante o comportamento correto do fundo */
+    background-image: url("../Detalhes/Imagem/compressor.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Centralização perfeita do texto interno */
+    display: flex;
+    justify-content:left;
+    align-items: left;
+    flex-direction: column; /* Alinha títulos e subtítulos um abaixo do outro */
+    
+    /* Estética e espaçamento interno seguro */
+    color: white;
+    text-align: center;
+    padding: 19px; /* Padding fixo evita distorções em telas menores */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do elemento */
 }
+
 
 /* container dos cards */
 .cards {
@@ -71,5 +85,78 @@ nav a {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
+
+}
+/* ================== Responsividade ============================== */
+
+#celular {
+    display: block;/*Mostra conteúdo para celular.  */
+
+}
+
+#Tablet {
+    display: none;/*Esconde conteúdo para tablet.  */
+
+}
+
+#PC {
+
+    display: none;/* Esconde conteúdo para PC. */
+}
+
+@media (min-width:360px) {
+
+    body {
+     /* Muda fundo para lightslategray.*/
+        background-color: lightslategray;
+
+    }
+/* Esconde Tablet e PC*/
+    #Tablet,
+    #PC {
+ /* mostra só celular.   */
+        display: none;
+    }
+
+}
+
+@media (min-width:768px) {
+   
+    body {
+         /*Fundo vira lightyellow.*/
+        background-color: lightyellow;
+    }
+  /* Esconde celular e PC*/
+    #celular,
+    #PC {
+
+        display: none;
+
+    }
+  /* mostra Tablet.*/
+    #Tablet {
+
+        display: block;
+    }
+}
+
+@media (min-width:1024px) {
+/*Fundo vira thistle (roxo claro).*/
+    body {
+
+        background-color: thistle;
+    }
+   /* Esconde celular e Tablet*/
+    #celular,
+    #Tablet {
+
+        display: none;
+
+    }
+   /*  mostra PC. */ 
+       #PC {
+
+        display: block;
+    }
 
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +10,48 @@
     <link rel="stylesheet" href="Global.css">
 
 </head>
+
 <body>
-    
-        <nav>
-       <a href="../Cadastro/cadastro.html"><h3>Cadastro</h3></a>
-        <a href="../Detalhes/detalhe.html"><h3>Detelhes</h3></a> 
-        <a href="../EsqueceuSenha/esqueceuSenha.html"><h3>Esquceu Senha!!!</h3></a>  
-        <a href="../Listagem/listagem.html"><h3>Listagem</h3></a>     
-        <a href="../Login/login.html"><h3>Login</h3></a>
-        <a href="../index.html"><h3>Tela Menu</h3></a>
-        
-        
+
+    <nav>
+        <a href="../Cadastro/cadastro.html">
+            <h3>Cadastro</h3>
+        </a>
+        <a href="../Detalhes/detalhe.html">
+            <h3>Detelhes</h3>
+        </a>
+        <a href="../EsqueceuSenha/esqueceuSenha.html">
+            <h3>Esqueceu Senha!!!</h3>
+        </a>
+        <a href="../Listagem/listagem.html">
+            <h3>Listagem</h3>
+        </a>
+        <a href="../Login/login.html">
+            <h3>Login</h3>
+        </a>
+        <a href="../index.html">
+            <h3>Tela Menu</h3>
+        </a>
+
+
 
     </nav>
 
     <h1>Resumo</h1>
+
+ <!-- Adicionada a classe 'container' para conectar com o CSS anterior -->
+<form action="seu_script_de_envio.php" method="POST" class="container"> 
+
+    <!-- O atributo 'for' conecta o clique do label diretamente à caixa de texto -->
+    <label for="campo-resumo">Resumo:</label> 
     
+    <textarea id="campo-resumo" name="resumo" maxlength="800" rows="16" placeholder="Digite o resumo aqui..."></textarea>
+    
+    <button type="submit">Enviar</button>
+
+</form>
+
+
 </body>
+
 </html>
