@@ -1,6 +1,6 @@
 
 nav {
-    background-color: aquamarine; /* define a cor de fundo do menu */
+    background-color: lightslategray; /* define a cor de fundo do menu */
     
     display: flex;                /* ativa o layout flexível (Flexbox) */
     
@@ -18,7 +18,7 @@ nav {
 /* CORRETO → aplicar nos links */
 nav a {
     text-decoration: none;       /* remove o underline dos links */
-    color: green;                /* define a cor do texto */
+    color: white;                /* define a cor do texto */
 }
 
 .container {
@@ -34,7 +34,8 @@ nav a {
 
     border: none;
     border-radius: 20px;
-    padding: 2% 
+    padding: 2px
+    
 }
 
 form {
@@ -71,10 +72,26 @@ input {
 button {
      width: 100%;           /* 100% do container, tamanho dos botões */
     padding: 16px;
-    background-color: lightsalmon;
+   background-color: lightskyblue;
     border: none;
     border-radius: 10px;
 }
+
+/* Rodapé Fixo no Final */
+footer {
+    background-color: lightslategray;
+    color: white;
+    text-align: center;
+    padding: 45px; /* Padding fixo evita distorções em telas menores */
+    border-radius: 15px;
+    margin-top: auto;
+}
+
+footer h4 {
+    margin: 0;
+}
+
+
 
 /* ================== Responsividade ============================== */
 
@@ -133,7 +150,7 @@ button {
 /*Fundo vira thistle (roxo claro).*/
     body {
 
-        background-color: thistle;
+        background-color: white;
     }
    /* Esconde celular e Tablet*/
     #celular,

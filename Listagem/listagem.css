@@ -1,5 +1,5 @@
 nav {
-    background-color: aquamarine; /* define a cor de fundo do menu */
+    background-color: lightslategray; /* define a cor de fundo do menu */
     
     display: flex;                /* ativa o layout flexível (Flexbox) */
     
@@ -7,7 +7,7 @@ nav {
     
     align-items: center;         /* alinha os itens verticalmente no centro */
     
-    padding: 25px;               /* espaço interno (topo, baixo, esquerda, direita) */
+    padding: 22px;               /* espaço interno (topo, baixo, esquerda, direita) */
     
     border-radius: 10px;         /* arredonda os cantos do nav */
     
@@ -17,7 +17,7 @@ nav {
 /* CORRETO → aplicar nos links */
 nav a {
     text-decoration: none;       /* remove o underline dos links */
-    color: green;                /* define a cor do texto */
+    color: white;                /* define a cor do texto */
 }
 
 .container {
@@ -25,12 +25,32 @@ nav a {
     display: flex;           /* ativa o flex */
     justify-content: center; /* centraliza vertical */
     align-items: center;     /* centraliza horizontal */
-    gap: 20px;               /* espaço entre os elementos */
+    gap: 10px;               /* espaço entre os elementos */
     margin-top: 5px;        /*espaço acima */
+    margin-bottom: 10px;    /* espaço abaixo */
     border: none;
     border-radius: 20px;
-    padding: 8% 
+    padding: 10%;
 }
+
+/* Rodapé Fixo no Final */
+footer {
+    background-color: lightslategray;
+    color: white;
+    text-align: center;
+    padding: 35px; /* Padding fixo evita distorções em telas menores */
+    border-radius: 15px;
+    gap: 25px;
+    margin-top: auto;
+}
+
+footer h4 {
+    margin: 0;
+}
+
+
+
+
 
 /* ================== Responsividade ============================== */
 
@@ -89,7 +109,7 @@ nav a {
 /*Fundo vira thistle (roxo claro).*/
     body {
 
-        background-color: thistle;
+        background-color: white;
     }
    /* Esconde celular e Tablet*/
     #celular,

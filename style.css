@@ -4,23 +4,6 @@ body {
     gap: 20px;                  /* cria espaço automático entre todos os elementos filhos */
 }
 
-a {
-    text-decoration: none;        /* remove sublinhado dos links */
-    color: black;               /* define a cor do texto como preto */
-}
-
-nav {
-    background-color: lightskyblue; /* cor de fundo do menu */
-    display: flex;                    /* ativa o Flexbox */
-    align-items: center;              /*alinha os itens verticalmente no centro */
-    padding: 10px;                    /* espaçamento interno */
-    border-radius: 10px;              /* bordas arredondadas */
-    gap: 40px;                        /* espaço entre os itens dentro do nav */
-    margin-bottom: 20px;              /* espaço abaixo do nav (separa do conteúdo) */
-     text-align: center;
-     justify-content: center;
-}
-
    
 h1 {
     display: flex;                       /* torna o título flexível */
@@ -35,23 +18,17 @@ h3{
 
 }
 
-section {
-    background-color: aquamarine; /* cor de fundo da seção */
-    display: flex;                  /* ativa layout flexível */
-    justify-content: space-between;  /* distribui os elementos com espaço ao redor */
-    align-items: center;            /* alinha verticalmente ao centro */
-    padding: 10px;                  /* espaçamento interno */
-    border-radius: 10px;            /* bordas arredondadas */
-    justify-content: center;
-}
-
 .container {
     display: flex;               /* Define o container como flexível, permitindo organizar os elementos filhos em linha ou coluna */
-    align-items: flex-start;     /* Alinha os itens pelo topo do container (início do eixo cruzado) */
+    align-items: stretch;        /* Alinha os itens pelo topo do container (início do eixo cruzado) */
     gap: 40px;                   /* Cria um espaço de 40px entre os elementos filhos (imagem e cards) */
-    margin-top: 20px;            /* Adiciona um espaço de 20px acima do container */
+    mx;argin-top: 20px;            /* Adiciona um espaço de 20px acima do container */
     float: right;                /* Faz o container "flutuar" à direita dentro do elemento pai */
     flex-direction: row-reverse; /* Inverte a ordem dos elementos, colocando-os da direita para a esquerda */
+    padding: 6%;
+    background-color: lightslategray;
+    justify-content: center;
+    border-radius: 10p
 }
 
 /* imagem */
@@ -59,7 +36,7 @@ section {
     
     float: left;
     background-image: url("./Imagem/Ar.webp");
-    width: 300%;
+    width: 5%;
      height: auto;           /* Define a altura do banner como "auto" para que ele se adapte ao conteúdo */
     /* Responsividade */
     background-size: cover;
@@ -72,7 +49,7 @@ section {
     align-items: center;
     color: white;
     text-align: center;
-    padding:45%;
+    padding: 11%; /* Padding fixo evita distorções em telas menores*/ 
 }
     
 /* container dos cards */
@@ -84,11 +61,25 @@ section {
 
 /* cada card */
 .card {
-    background-color: #e06b6b; /* cor de fundo do card */
+    background-color:  lightskyblue; /* cor de fundo do card */
     padding: 20px;             /* espaçamento interno */
     border-radius: 10px;         /* bordas arredondadas */
     width: 400px;;                /* largura fixa do card */
     text-align: center;          /* centraliza o texto dentro do card */
+}
+
+/* Rodapé Fixo no Final */
+footer {
+    background-color: lightslategray;
+    color: white;
+    text-align: center;
+    padding: 45px; /* Padding fixo evita distorções em telas menores */
+    border-radius: 15px;
+    margin-top: auto;
+}
+
+footer h4 {
+    margin: 0;
 }
 
 /* ================== Responsividade ============================== */
@@ -148,7 +139,7 @@ section {
 /*Fundo vira thistle (roxo claro).*/
     body {
 
-        background-color: thistle;
+        background-color: white;
     }
    /* Esconde celular e Tablet*/
     #celular,

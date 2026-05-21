@@ -1,76 +1,57 @@
 nav {
-    background-color: aquamarine;
-    /* define a cor de fundo do menu */
-
-    display: flex;
-    /* ativa o layout flexível (Flexbox) */
-
-    justify-content: space-around;
-    /* distribui os links com espaço ao redor */
-
-    align-items: center;
-    /* alinha os itens verticalmente no centro */
-
-    padding: 25px;
-    /* espaço interno (topo, baixo, esquerda, direita) */
-
-    border-radius: 10px;
-    /* arredonda os cantos do nav */
-
-    text-decoration: none;
-    /* NÃO funciona aqui para links (ver observação abaixo) */
+    background-color:  lightslategrey; /* define a cor de fundo do menu */
+    
+    display: flex;                /* ativa o layout flexível (Flexbox) */
+    
+    justify-content: space-around; /* distribui os links com espaço ao redor */
+    
+    align-items: center;         /* alinha os itens verticalmente no centro */
+    
+    padding: 25px;               /* espaço interno (topo, baixo, esquerda, direita) */
+    
+    border-radius: 10px;         /* arredonda os cantos do nav */
+    
+    text-decoration: none;       /* NÃO funciona aqui para links (ver observação abaixo) */
 }
 
 /* CORRETO → aplicar nos links */
 nav a {
-    text-decoration: none;
-    /* remove o underline dos links */
-    color: green;
-    /* define a cor do texto */
+    text-decoration: none;       /* remove o underline dos links */
+    color: white;                /* define a cor do texto */
 }
+
 
 .container {
     background-color: lightslategrey;
-    display: flex;
-    /* ativa o flex */
-    flex-direction: list-item;
-    /* coloca um abaixo do outro */
-
-    justify-content: center;
-    /* centraliza vertical */
-    align-items: center;
-    /* centraliza horizontal */
-    margin-top: 5px;
-    /*espaço acima */
-    border: none;
-    border-radius: 20px;
-    padding: 2%
+    display: flex;           /* ativa o flex */
+    flex-direction: row-reverse;  /* coloca um abaixo do outro */
+    justify-content: center; /* centraliza vertical */
+    align-items: stretch;     /* centraliza horizontal */
+    gap: 10px;               /* espaço entre os elementos */
+    margin-top: 2px;        /*espaço acima */
+    /* margin-bottom: 10px;    espaço abaixo */
+    border: none;/* Remove a borda */
+    border-radius: 20px;/* Arredonda os cantos */
+    padding: 45px; /* Espaço interno (topo, baixo, esquerda, direita) */
+    margin-bottom: 10px;
 }
 
+
 #imagem {
-    /* Ocupa toda a largura disponível sem estourar a tela */
-    width: 200%;
-    
-    /* Define uma altura fixa ou dinâmica para o banner aparecer */
-    height: 60% ; /* 60% da altura da tela (ajuste como preferir) */
-    
-    /* Garante o comportamento correto do fundo */
-    background-image: url("../Detalhes/Imagem/compressor.jpg");
+    background-image: url("../Detalhes/Imagem/compressor.jpg");/* Define a imagem de fundo */
+    float: left;
+    width: 25px;
+    height: 210px;           /* Define a altura do banner como "auto" para que ele se adapte ao conteúdo */
+    /* Responsividade */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    /* Centralização perfeita do texto interno */
+    /* Centralização do conteúdo */
     display: flex;
-    justify-content:left;
-    align-items: left;
-    flex-direction: column; /* Alinha títulos e subtítulos um abaixo do outro */
-    
-    /* Estética e espaçamento interno seguro */
+    justify-content: center;
+    align-items: center;
     color: white;
-    text-align: center;
-    padding: 19px; /* Padding fixo evita distorções em telas menores */
-    box-sizing: border-box; /* Garante que o padding não aumente o tamanho do elemento */
+      padding: 10%; /* Padding fixo evita distorções em telas menores */
 }
 
 
@@ -87,6 +68,22 @@ nav a {
     padding: 15px;
 
 }
+
+/* Rodapé Fixo no Final */
+footer {
+    background-color: lightslategray;/* Define a cor de fundo do rodapé */
+    color: white;/* Define a cor do texto do rodapé */
+    text-align: center;/* Alinha o texto ao centro */
+    padding: 35px; /* Padding fixo evita distorções em telas menores */
+    border-radius: 15px;/* Arredonda os cantos */
+    gap: 25px;/* Espaço entre os elementos */
+    margin-top: auto;/* Espaço acima */
+}
+
+footer h4 {
+    margin: 0;/* Remove o espaço interno do h4 */
+}
+
 /* ================== Responsividade ============================== */
 
 #celular {
@@ -144,7 +141,7 @@ nav a {
 /*Fundo vira thistle (roxo claro).*/
     body {
 
-        background-color: thistle;
+        background-color: white;
     }
    /* Esconde celular e Tablet*/
     #celular,

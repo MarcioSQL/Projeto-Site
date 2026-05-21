@@ -1,5 +1,5 @@
 nav {
-    background-color: aquamarine; /* define a cor de fundo do menu */
+    background-color:  lightslategrey; /* define a cor de fundo do menu */
     
     display: flex;                /* ativa o layout flexível (Flexbox) */
     
@@ -17,47 +17,73 @@ nav {
 /* CORRETO → aplicar nos links */
 nav a {
     text-decoration: none;       /* remove o underline dos links */
-    color: green;                /* define a cor do texto */
+    color: white;                /* define a cor do texto */
 }
 
 .container {
     background-color: lightslategrey;
     display: flex;           /* ativa o flex */
     flex-direction: column;  /* coloca um abaixo do outro */
-
     justify-content: center; /* centraliza vertical */
     align-items: center;     /* centraliza horizontal */
+    gap: 10px;               /* espaço entre os elementos */
+    margin-top: 5px;        /*espaço acima */
+    margin-bottom: 10px;    /* espaço abaixo */
+    border: none;/* Remove a borda */
+    border-radius: 20px;/* Arredonda os cantos */
+    padding: 6.5% /* Espaço interno (topo, baixo, esquerda, direita) */
+}
 
-    gap: 20px;               /* espaço entre os elementos */
-     margin-top: 5px;        /*espaço acima */
 
-    border: none;
-    border-radius: 20px;
-    padding: 2% 
+
+button {
+     background-color: lightskyblue;/* Define a cor de fundo do botão */
+    color: black;/* Define a cor do texto do botão */
+    padding: 10px 60px;/* Define o padding interno do botão */
+    border: none;/* Remove a borda */
+    border-radius: 5px;/* Arredonda os cantos */
+    cursor: pointer;/* Define o cursor como ponteiro ao passar o mouse sobre o botão */
+    transition: background-color 0.3s ease;/* Define a transição de cor ao passar o mouse */
+
+
 }
 
 
 
 /* Estilização específica para a caixa de texto grande */
 textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    width: 100%;/* Ocupa 100% da largura do container */
+    padding: 12px;/* Espaço interno */
+    border: 1px solid #ccc;/* Bordas */
+    border-radius: 4px;/* Arredonda os cantos */
+    font-size: 16px;/* Tamanho da fonte */
     font-family: Arial, sans-serif; /* Mantém a fonte igual à da página */
-    box-sizing: border-box;
+    box-sizing: border-box;/* Garante que o padding e a borda não aumentem o tamanho do elemento */
     resize: vertical; /* Permite ao usuário esticar apenas para baixo, nunca para os lados */
-    transition: border-color 0.3s;
+    transition: border-color 0.3s;/* Transição de cor ao passar o mouse */
 }
 
 /* Efeito de clique na caixa de texto */
 textarea:focus {
-    border-color: #007bff;
-    outline: none;
+    border-color: #007bff;/* Define a cor da borda ao clicar */
+    outline: none;/* Remove o contorno ao clicar */
 }
 
 
+/* Rodapé Fixo no Final */
+footer {
+    background-color: lightslategray;/* Define a cor de fundo do rodapé */
+    color: white;/* Define a cor do texto do rodapé */
+    text-align: center;/* Alinha o texto ao centro */
+    padding: 35px; /* Padding fixo evita distorções em telas menores */
+    border-radius: 15px;/* Arredonda os cantos */
+    gap: 25px;/* Espaço entre os elementos */
+    margin-top: auto;/* Espaço acima */
+}
+
+footer h4 {
+    margin: 0;/* Remove o espaço interno do h4 */
+}
 
 
 /* ================== Responsividade ============================== */
@@ -117,7 +143,7 @@ textarea:focus {
 /*Fundo vira thistle (roxo claro).*/
     body {
 
-        background-color: thistle;
+        background-color: white;
     }
    /* Esconde celular e Tablet*/
     #celular,
