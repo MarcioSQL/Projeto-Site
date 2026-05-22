@@ -1,48 +1,43 @@
 
 nav {
-    background-color: lightslategray; /* define a cor de fundo do menu */
-    
-    display: flex;                /* ativa o layout flexível (Flexbox) */
-    
-    justify-content: space-around; /* distribui os links com espaço ao redor */
-    
-    align-items: center;         /* alinha os itens verticalmente no centro */
-    
-    padding: 15px;               /* espaço interno (topo, baixo, esquerda, direita) */
-    
-    border-radius: 10px;         /* arredonda os cantos do nav */
-    
-    text-decoration: none;       /* NÃO funciona aqui para links (ver observação abaixo) */
+    background-color: lightslategray; /* define a cor de fundo do menu */    
+    display: flex;                      /* ativa o layout flexível (Flexbox) */
+    justify-content: space-around;      /* distribui os links com espaço ao redor */   
+    align-items: center;                /* alinha os itens verticalmente no centro */
+    padding: 15px;                      /* espaço interno (topo, baixo, esquerda, direita) */
+    border-radius: 10px;                /* arredonda os cantos do nav */
+   
 }
+  
 
-/* CORRETO → aplicar nos links */
 nav a {
-    text-decoration: none;       /* remove o underline dos links */
-    color: white;                /* define a cor do texto */
+    text-decoration: none; /* remove o underline dos links */
+    color: white;        /* define a cor do texto */
+    padding: 10px 15px;     /* espaço interno para aumentar a área clicável */
+    text-size-adjust: auto; /* ajusta o tamanho do texto para melhor legibilidade em telas menores */
+  
 }
 
-.container {
-    background-color: lightslategrey;
+.card{
+    background-color: lightslategray;
     display: flex;           /* ativa o flex */
-    flex-direction: column;  /* coloca um abaixo do outro */
-
+    /* flex-direction: column;  coloca um abaixo do outro */
     justify-content: center; /* centraliza vertical */
-    align-items: center;     /* centraliza horizontal */
-
+    align-items: initial;    /* centraliza horizontal */
     gap: 20px;               /* espaço entre os elementos */
-     margin-top: 5px;        /*espaço acima */
-
-    border: none;
-    border-radius: 20px;
-    padding: 2px
-    
-}
+    margin-top: 5px;         /*espaço acima */
+    margin-bottom: 5px;      /* espaço abaixo */
+    border: none;            /* remove borda padrão */
+    border-radius: 20px;     /* arredonda os cantos do card */
+    padding: 60px;           /* espaço interno para melhor usabilidade */
+    text-align: right;       /* alinha o texto à direita */
+           }
 
 form {
-    display: flex;              /* ativa flex */
-    flex-direction: column;     /* coloca um abaixo do outro */
-    align-items: start;        /* Posiciona itens a partir do início */
-    gap: 10px;                  /* espaço entre campos */
+    display: flex;          /* ativa flex */
+    flex-direction: column; /* coloca um abaixo do outro */
+    align-items: start;     /* Posiciona itens a partir do início */
+    gap: 4px;               /* espaço entre campos */
 }
 
 .card img {
@@ -56,24 +51,33 @@ form {
     display: flex;          /* coloca lado a lado */
     align-items: center;    /* alinha verticalmente */
     justify-content: center;/* mantém centralizado na tela */
-    gap: 10px;              /* espaço entre label e input */
+    gap: 3px;              /* espaço entre label e input */
+    width: 100%;          /* ocupa toda a largura disponível */
+   
 }
 
 label {
     width: 100px;           /* largura fixa (alinha todos) */
-     text-align: start;       /* texto encostado no input */
+    text-align: right; /* alinha o texto à direita para ficar próximo ao input */
+   
+     
 }
 
 input {
-    width: 350px;           /* tamanho dos inputs */
-    padding: 6px;
+    width: 100%;           /* tamanho dos inputs */
+    max-width: 350px; /* limita o tamanho máximo para telas maiores */
+    padding: 3px;/* espaço interno para melhor usabilidade */
+     border: none;/* remove borda padrão */
 }
 
 button {
      width: 100%;           /* 100% do container, tamanho dos botões */
-    padding: 16px;
-   background-color: lightskyblue;
-    border: none;
+    padding: 10px; /* espaço interno para melhor usabilidade */
+   background-color: lightskyblue;/* cor de fundo do botão */
+    border: none;/* remove borda padrão */
+     color: blue;/* cor do texto do botão */
+     font-size: 16px; /* tamanho da fonte */
+      cursor: pointer; /* muda o cursor para indicar que é clicável */
     border-radius: 10px;
 }
 
@@ -82,9 +86,9 @@ footer {
     background-color: lightslategray;
     color: white;
     text-align: center;
-    padding: 45px; /* Padding fixo evita distorções em telas menores */
+    padding: 20px; /* Padding fixo evita distorções em telas menores */
     border-radius: 15px;
-    margin-top: auto;
+    margin-top: 2px;
 }
 
 footer h4 {
@@ -122,6 +126,7 @@ footer h4 {
     #PC {
  /* mostra só celular.   */
         display: none;
+
     }
 
 }
