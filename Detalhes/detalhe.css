@@ -39,9 +39,9 @@ nav a {
 
 #imagem {
     background-image: url("../Detalhes/Imagem/compressor.jpg");/* Define a imagem de fundo */
-    float: left;
-    width: 25px;
-    height: 210px;           /* Define a altura do banner como "auto" para que ele se adapte ao conteúdo */
+    float: left;/* Faz o banner "flutuar" à esquerda dentro do elemento pai */
+    width: auto;/* Define a largura do banner como "auto" para que ele se adapte ao conteúdo */
+    height: auto; /* Define a altura do banner como "auto" para que ele se adapte ao conteúdo */
     /* Responsividade */
     background-size: cover;
     background-position: center;
@@ -59,13 +59,12 @@ nav a {
 .cards {
     display: inline-flex;
     /* ativa Flexbox */
-    flex-direction: row-reverse;
-    /* coloca os cards em coluna (um abaixo do outro) */
-    gap: 15px;
+    flex-direction: row-reverse; /*coloca os cards em coluna (um abaixo do outro) */
+    gap: 15px;   
     /* espaço entre os cards */
     background-color: white;
-    border-radius: 10px;
-    padding: 15px;
+    border-radius: 10px;/* Arredonda os cantos */
+    padding: 5%;/* Padding fixo evita distorções em telas menores */
 
 }
 
@@ -121,7 +120,7 @@ footer h4 {
    
     body {
          /*Fundo vira lightyellow.*/
-        background-color: lightyellow;
+        background-color: lightgreen;
     }
   /* Esconde celular e PC*/
     #celular,
@@ -141,7 +140,7 @@ footer h4 {
 /*Fundo vira thistle (roxo claro).*/
     body {
 
-        background-color: white;
+        background-color: white
     }
    /* Esconde celular e Tablet*/
     #celular,

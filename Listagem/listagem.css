@@ -89,7 +89,7 @@ footer h4 {
    
     body {
          /*Fundo vira lightyellow.*/
-        background-color: lightyellow;
+        background-color: lightgreen;
     }
   /* Esconde celular e PC*/
     #celular,
@@ -109,7 +109,7 @@ footer h4 {
 /*Fundo vira thistle (roxo claro).*/
     body {
 
-        background-color: white;
+        background-color: white
     }
    /* Esconde celular e Tablet*/
     #celular,

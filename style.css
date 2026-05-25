@@ -7,13 +7,14 @@ body {
    
 h1 {
     display: flex;                       /* torna o título flexível */
-     justify-content: space-around;  /* (comentado) distribuiria elementos horizontalmente */
+    justify-content: space-around;  /* (comentado) distribuiria elementos horizontalmente */
     align-items: center;                 /* centraliza verticalmente (caso tenha mais elementos dentro) */
-     text-align: center;
-     justify-content: center;
+    text-align: center;
+    justify-content: center;
 }
 
 h3{
+
  justify-content: center;
 
 }
@@ -22,7 +23,7 @@ h3{
     display: flex;               /* Define o container como flexível, permitindo organizar os elementos filhos em linha ou coluna */
     align-items: stretch;        /* Alinha os itens pelo topo do container (início do eixo cruzado) */
     gap: 40px;                   /* Cria um espaço de 40px entre os elementos filhos (imagem e cards) */
-    mx;argin-top: 20px;            /* Adiciona um espaço de 20px acima do container */
+    margin-top: 20px;            /* Adiciona um espaço de 20px acima do container */
     float: right;                /* Faz o container "flutuar" à direita dentro do elemento pai */
     flex-direction: row-reverse; /* Inverte a ordem dos elementos, colocando-os da direita para a esquerda */
     padding: 6%;
@@ -36,7 +37,7 @@ h3{
     
     float: left;
     background-image: url("./Imagem/Ar.webp");
-    width: 5%;
+    width: 20%;
      height: auto;           /* Define a altura do banner como "auto" para que ele se adapte ao conteúdo */
     /* Responsividade */
     background-size: cover;
@@ -64,7 +65,7 @@ h3{
     background-color:  lightskyblue; /* cor de fundo do card */
     padding: 20px;             /* espaçamento interno */
     border-radius: 10px;         /* bordas arredondadas */
-    width: 400px;;                /* largura fixa do card */
+    width: 95%;                /* largura fixa do card */
     text-align: center;          /* centraliza o texto dentro do card */
 }
 
@@ -119,7 +120,7 @@ footer h4 {
    
     body {
          /*Fundo vira lightyellow.*/
-        background-color: lightyellow;
+        background-color: lightgreen;
     }
   /* Esconde celular e PC*/
     #celular,
@@ -139,7 +140,7 @@ footer h4 {
 /*Fundo vira thistle (roxo claro).*/
     body {
 
-        background-color: white;
+        background-color: white
     }
    /* Esconde celular e Tablet*/
     #celular,

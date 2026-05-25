@@ -54,22 +54,28 @@ form {
 
 
 label {
-    width: 100px;           /* largura fixa (alinha todos) */
-     text-align: start;       /* texto encostado no input */
+    display: inline-block;/* Permite aplicar a largura fixa */
+    width: 110px;         /* Largura fixa (alinha todos) */         
+    text-align: start;    /* Texto encostado no input */    
 }
 
 input {
-    width: 350px;           /* tamanho dos inputs */
-    padding: 6px;
+    width: 100%;              /* Ocupa o espaço disponível sem transbordar */
+    max-width: 300px;         /* Limita o crescimento em telas grandes */
+    padding: 8px;             /* Padding em px evita distorções */
+    box-sizing: border-box;   /* Garante que o padding não aumente o input */
 }
 
 button {
-    width: 100%;           /* 100% do container, tamanho dos botões */
-    padding: 6px;
-    background-color: lightskyblue;
-    border: none;
-    border-radius: 10px;
+    width: 100%;                     /* Ocupa o espaço disponível sem transbordar */             
+    max-width: 200px;                /* Limita o crescimento em telas grandes */        
+    padding: 10px;                   /* Padding em px evita distorções */
+    background-color: lightskyblue;/* Cor de fundo */
+    border: none;                    /* Sem borda padrão */
+    border-radius: 10px;             /* Arredonda os cantos */
+    cursor: pointer;                 /* Adiciona a mãozinha ao passar o mouse */
 }
+
 /* Rodapé Fixo no Final */
 footer {
     background-color: lightslategray;
@@ -103,6 +109,7 @@ footer h4 {
     display: none;/* Esconde conteúdo para PC. */
 }
 
+
 @media (min-width:360px) {
 
     body {
@@ -123,7 +130,7 @@ footer h4 {
    
     body {
          /*Fundo vira lightyellow.*/
-        background-color: lightyellow;
+        background-color: lightgreen;
     }
   /* Esconde celular e PC*/
     #celular,
@@ -143,7 +150,7 @@ footer h4 {
 /*Fundo vira thistle (roxo claro).*/
     body {
 
-        background-color: white;
+        background-color: white
     }
    /* Esconde celular e Tablet*/
     #celular,

@@ -58,9 +58,7 @@ form {
 
 label {
     width: 100px;           /* largura fixa (alinha todos) */
-    text-align: right; /* alinha o texto à direita para ficar próximo ao input */
-   
-     
+    text-align: right; /* alinha o texto à direita para ficar próximo ao input */     
 }
 
 input {
@@ -72,6 +70,7 @@ input {
 
 button {
      width: 100%;           /* 100% do container, tamanho dos botões */
+     max-width: 360px;              /* Limita o crescimento em telas grandes */ 
     padding: 10px; /* espaço interno para melhor usabilidade */
    background-color: lightskyblue;/* cor de fundo do botão */
     border: none;/* remove borda padrão */
@@ -80,7 +79,6 @@ button {
       cursor: pointer; /* muda o cursor para indicar que é clicável */
     border-radius: 10px;
 }
-
 /* Rodapé Fixo no Final */
 footer {
     background-color: lightslategray;
@@ -126,7 +124,6 @@ footer h4 {
     #PC {
  /* mostra só celular.   */
         display: none;
-
     }
 
 }
@@ -135,7 +132,7 @@ footer h4 {
    
     body {
          /*Fundo vira lightyellow.*/
-        background-color: lightyellow;
+        background-color: lightgreen;
     }
   /* Esconde celular e PC*/
     #celular,
@@ -155,7 +152,7 @@ footer h4 {
 /*Fundo vira thistle (roxo claro).*/
     body {
 
-        background-color: white;
+        background-color: white
     }
    /* Esconde celular e Tablet*/
     #celular,
