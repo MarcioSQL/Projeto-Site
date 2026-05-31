@@ -1,0 +1,161 @@
+
+body {
+    display: flex;              /* transforma o body em um container flexível */
+    flex-direction: column;     /* organiza os elementos na vertical (um abaixo do outro) */
+    gap: 20px;                  /* cria espaço automático entre todos os elementos filhos */
+  
+}
+
+
+nav {
+    background-color:  lightslategrey; /* define a cor de fundo do menu */
+    
+    display: flex;                /* ativa o layout flexível (Flexbox) */
+    
+    justify-content: space-around; /* distribui os links com espaço ao redor */
+    
+    align-items: center;         /* alinha os itens verticalmente no centro */
+    
+    padding: 25px;               /* espaço interno (topo, baixo, esquerda, direita) */
+    
+    border-radius: 10px;         /* arredonda os cantos do nav */
+    
+    text-decoration: none;       /* NÃO funciona aqui para links (ver observação abaixo) */
+}
+
+/* CORRETO → aplicar nos links */
+nav a {
+    text-decoration: none;       /* remove o underline dos links */
+    color: white;                /* define a cor do texto */
+}
+
+
+.container {
+    background-color: lightslategrey;
+    display: flex;           /* ativa o flex */
+    flex-direction: column;  /* coloca um abaixo do outro */
+    justify-content: center; /* centraliza vertical */
+    align-items: center;     /* centraliza horizontal */
+    gap: 10px;               /* espaço entre os elementos */
+    margin-top: 5px;        /*espaço acima */
+    margin-bottom: 10px;    /* espaço abaixo */
+    border: none;/* Remove a borda */
+    border-radius: 20px;/* Arredonda os cantos */
+    padding: 13% /* Espaço interno (topo, baixo, esquerda, direita) */
+}
+
+form {
+    display: flex;              /* ativa flex */
+    flex-direction: column;     /* coloca um abaixo do outro */
+    align-items: start;        /* Posiciona itens a partir do início */
+    gap: 10px;                  /* espaço entre campos */
+}
+
+
+label {
+    width: 100px;           /* largura fixa (alinha todos) */
+     text-align: start;       /* texto encostado no input */
+}
+
+input {
+    width: 350px;           /* tamanho dos inputs */
+    padding: 6px;
+}
+
+button {
+    width: 100%;           /* 100% do container, tamanho dos botões */
+    padding: 6px;
+    background-color: lightskyblue;
+    border: none;
+    border-radius: 10px;
+}
+/* Rodapé Fixo no Final */
+footer {
+    background-color: lightslategray;/* Define a cor de fundo do rodapé */
+    color: white;/* Define a cor do texto do rodapé */
+    text-align: center;/* Alinha o texto ao centro */
+    padding: 35px; /* Padding fixo evita distorções em telas menores */
+    border-radius: 15px;/* Arredonda os cantos */
+    gap: 25px;/* Espaço entre os elementos */
+    margin-top: auto;/* Espaço acima */
+}
+
+footer h4 {
+    margin: 0;/* Remove o espaço interno do h4 */
+}
+
+
+
+    /* ================== Responsividade ============================== */
+
+#celular {
+    display: block;/*Mostra conteúdo para celular.  */
+
+}
+
+#Tablet {
+    display: none;/*Esconde conteúdo para tablet.  */
+
+}
+
+#PC {
+
+    display: none;/* Esconde conteúdo para PC. */
+}
+
+@media (min-width:360px) {
+
+    body {
+     /* Muda fundo para lightslategray.*/
+        background-color: lightslategray;
+
+    }
+/* Esconde Tablet e PC*/
+    #Tablet,
+    #PC {
+ /* mostra só celular.   */
+        display: none;
+    }
+
+}
+
+@media (min-width:768px) {
+   
+    body {
+         /*Fundo vira lightyellow.*/
+        background-color: lightgreen;
+    }
+  /* Esconde celular e PC*/
+    #celular,
+    #PC {
+
+        display: none;
+
+    }
+  /* mostra Tablet.*/
+    #Tablet {
+
+        display: block;
+    }
+}
+
+@media (min-width:1024px) {
+/*Fundo vira thistle (roxo claro).*/
+    body {
+
+        background-color: white
+    }
+   /* Esconde celular e Tablet*/
+    #celular,
+    #Tablet {
+
+        display: none;
+
+    }
+   /*  mostra PC. */ 
+       #PC {
+
+        display: block;
+    }
+
+}

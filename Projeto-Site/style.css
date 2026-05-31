@@ -1,0 +1,174 @@
+body {
+    display: flex;              /* transforma o body em um container flexível */
+    flex-direction: column;     /* organiza os elementos na vertical (um abaixo do outro) */
+    gap: 20px;                  /* cria espaço automático entre todos os elementos filhos */
+}
+
+   
+h1 {
+    display: flex;                       /* torna o título flexível */
+    justify-content: space-around;  /*(comentado) distribuiria elementos horizontalmente */
+    align-items: center;                 /*centraliza verticalmente (caso tenha mais elementos dentro) */
+    text-align: center;                      /* alinha o texto à esquerda */
+    justify-content:center;
+}
+
+h3{
+
+ justify-content: center;
+
+}
+
+
+
+.bg-body-tertiary {
+    background-color: lightslategray;
+}
+
+.container {
+    display: flex;               /* Define o container como flexível, permitindo organizar os elementos filhos em linha ou coluna */
+    align-items: stretch;        /*.card os itens pelo topo do container (início do eixo cruzado)
+    gap: 10px;                   /* Cria um espaço de 40px entre os elementos filhos (imagem e cards) */
+    margin-top: 5px;            /* Adiciona um espaço de 20px acima do container */
+    float: right;                /* Faz o container "flutuar" à direita dentro do elemento pai */
+    flex-direction: row-reverse; /* Inverte a ordem dos elementos, colocando-os da direita para a esquerda */
+    padding: 5%;
+    background-color: lightslategray;
+    justify-content: space-evenly;
+    border-radius: 10px;
+
+}
+
+/* imagem */
+#imagem {
+    
+    float: left;
+    background-image: url("./Imagem/img_1.jpeg"); /* Substitua pelo caminho da sua imagem */
+    width: 40%;/* Define a largura do banner como 100% para que ele ocupe toda a largura do container */
+     height: auto;           /* Define a altura do banner como "auto" para que ele se adapte ao conteúdo */
+    /* Responsividade */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Centralização do conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 11%; /* Padding fixo evita distorções em telas menores*/ 
+    border-radius: 15px;
+}
+    
+/* container dos cards */
+.cards {
+    display: flex;            /* ativa Flexbox */
+    flex-direction: column;   /* coloca os cards em coluna (um abaixo do outro) */
+    gap: 8%;                /* espaço entre os cards */
+    justify-content: left; /* centraliza os cards horizontalmente */
+  width: 40%;              /* largura do container dos cards */
+  padding: 4px;           /* espaçamento interno do container dos cards */
+  text-align: center;        /* alinha o texto à esquerda */
+
+}
+
+/* cada card */
+.card {
+    background-color:  lightskyblue; /* cor de fundo do card */
+    padding: 20px;             /* espaçamento interno */
+    border-radius: 10px;         /* bordas arredondadas */
+    width: 100%;                /* largura fixa do card */
+    text-align: center;          /* centraliza o texto dentro do card */
+    height: 4%;               /* altura do card */
+
+    
+}
+
+/* Rodapé Fixo no Final */
+footer {
+    background-color: lightslategray;
+    color: white;
+    text-align: center;
+    padding: 15px; /* Padding fixo evita distorções em telas menores */
+    border-radius: 15px;
+    margin-top: auto;
+}
+
+footer h4 {
+    margin: 0;
+}
+
+/* ================== Responsividade ============================== */
+
+#celular {
+    display: block;/*Mostra conteúdo para celular.  */
+
+}
+
+#Tablet {
+    display: none;/*Esconde conteúdo para tablet.  */
+
+}
+
+#PC {
+
+    display: none;/* Esconde conteúdo para PC. */
+}
+
+@media (min-width:360px) {
+
+    body {
+     /* Muda fundo para lightslategray.*/
+        background-color: lightslategray;
+
+    }
+/* Esconde Tablet e PC*/
+    #Tablet,
+    #PC {
+ /* mostra só celular.   */
+        display: none;
+    }
+
+}
+
+@media (min-width:768px) {
+   
+    body {
+         /*Fundo vira lightyellow.*/
+        background-color: lightgreen;
+    }
+  /* Esconde celular e PC*/
+    #celular,
+    #PC {
+
+        display: none;
+
+    }
+  /* mostra Tablet.*/
+    #Tablet {
+
+        display: block;
+    }
+}
+
+@media (min-width:1024px) {
+/*Fundo vira thistle (roxo claro).*/
+    body {
+
+        background-color: white
+    }
+   /* Esconde celular e Tablet*/
+    #celular,
+    #Tablet {
+
+        display: none;
+
+    }
+   /*  mostra PC. */ 
+       #PC {
+
+        display: block;
+    }
+
+}

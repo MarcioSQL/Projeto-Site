@@ -1,0 +1,153 @@
+nav {
+    background-color:  lightslategrey; /* define a cor de fundo do menu */
+    display: flex;                /* ativa o layout flexível (Flexbox) */
+    justify-content: space-around; /* distribui os links com espaço ao redor */
+    align-items: center;         /* alinha os itens verticalmente no centro */
+    padding: 15px;               /* espaço interno (topo, baixo, esquerda, direita) */
+    border-radius: 10px;         /* arredonda os cantos do nav */
+    text-decoration: none;       /* NÃO funciona aqui para links (ver observação abaixo) */
+}
+
+/* CORRETO → aplicar nos links */
+nav a {
+    text-decoration: none;       /* remove o underline dos links */
+    color: white;                /* define a cor do texto */
+}
+
+
+
+
+.container {
+    background-color: lightslategrey;
+    display: flex;          /* ativa o flex */
+    flex-direction: center; /* organiza os elementos em linha */
+    justify-content: center;/* centraliza vertical */
+    align-items: center;    /* centraliza horizontal */
+    gap: 4px;               /* espaço entre os elementos */
+    margin-top: 2px;        /*espaço acima */
+    border: none;           /* Remove a borda */
+    border-radius: 20px;    /* Arredonda os cantos */
+    padding: 36px 36px;            /* Espaço interno (topo, baixo, esquerda, direita) */
+    margin-bottom: 2px;     /* Espaço abaixo */
+    max-width: 1062px;/* Limita a largura máxima para evitar distorções em telas maiores */
+     width: 100%;           /* Ocupa toda a largura disponível */
+    
+}
+
+
+
+#imagem {
+  width: 18%;              /* ocupa toda a largura disponível */
+  height: 1%;             /* mantém proporção original */
+  border-radius: 15px;      /* cantos arredondados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* sombra suave */
+  display: block;           /* garante comportamento de bloco */
+  margin: 0 auto;          /* centraliza horizontalmente */
+  object-fit: cover;        /* mantém proporção sem distorcer */
+  border-radius: 20px;    /* Arredonda os cantos */
+
+}
+
+
+
+/* container dos cards */
+.cards {
+    display: flex;      /* ativa Flexbox */
+    flex-direction: column;    /* organiza os cards em coluna */
+    gap: 10px;                 /* espaço entre os cards */
+    background-color: white;
+    border-radius: 10px;       /* Arredonda os cantos */
+    padding: 15px;              /* Padding fixo evita distorções em telas menores */
+    width: 100%;                /* ocupa toda a largura do container */
+   
+
+}
+
+/* Rodapé Fixo no Final */
+footer {
+    background-color: lightslategray;/* Define a cor de fundo do rodapé */
+    color: white;/* Define a cor do texto do rodapé */
+    text-align: center;/* Alinha o texto ao centro */
+    padding: 15px; /* Padding fixo evita distorções em telas menores */
+    border-radius: 15px;/* Arredonda os cantos */
+    gap: 25px;/* Espaço entre os elementos */
+    margin-top: auto;/* Espaço acima */
+}
+
+footer h4 {
+    margin: 0;/* Remove o espaço interno do h4 */
+}
+
+/* ================== Responsividade ============================== */
+
+#celular {
+    display: block;/*Mostra conteúdo para celular.  */
+
+}
+
+#Tablet {
+    display: none;/*Esconde conteúdo para tablet.  */
+
+}
+
+#PC {
+
+    display: none;/* Esconde conteúdo para PC. */
+}
+
+@media (min-width:360px) {
+
+    body {
+     /* Muda fundo para lightslategray.*/
+        background-color: lightslategray;
+
+    }
+/* Esconde Tablet e PC*/
+    #Tablet,
+    #PC {
+ /* mostra só celular.   */
+        display: none;
+    }
+
+}
+
+@media (min-width:768px) {
+   
+    body {
+         /*Fundo vira lightyellow.*/
+        background-color: lightgreen;
+    }
+  /* Esconde celular e PC*/
+    #celular,
+    #PC {
+
+        display: none;
+
+    }
+  /* mostra Tablet.*/
+    #Tablet {
+
+        display: block;
+    }
+}
+
+@media (min-width:1024px) {
+/*Fundo vira thistle (roxo claro).*/
+    body {
+
+        background-color: white
+    }
+   /* Esconde celular e Tablet*/
+    #celular,
+    #Tablet {
+
+        display: none;
+
+    }
+   /*  mostra PC. */ 
+       #PC {
+
+        display: block;
+    }
+
+}

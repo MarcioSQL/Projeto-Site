@@ -1,0 +1,178 @@
+nav {
+    background-color: lightslategray; /* define a cor de fundo do menu */ 
+    display: flex;                /* ativa o layout flexível (Flexbox) */
+    justify-content: space-around; /* distribui os links com espaço ao redor */
+    align-items: center;         /* alinha os itens verticalmente no centro */
+    padding: 22px;               /* espaço interno (topo, baixo, esquerda, direita) */
+    border-radius: 10px;         /* arredonda os cantos do nav */
+    text-decoration: none;       /* NÃO funciona aqui para links (ver observação abaixo) */
+}
+
+/* CORRETO → aplicar nos links */
+nav a {
+    text-decoration: none;       /* remove o underline dos links */
+    color: white;                /* define a cor do texto */
+}
+
+.container {
+    background-color: lightslategrey;
+    display: flex;           /* ativa o flex */
+    justify-content: center; /* centraliza horizontalmente no flex */
+    align-items: center;     /* centraliza verticalmente no flex */
+    gap: 15px;               /* aumentado para os cards não colarem */
+    margin-top: 5px;        
+    margin-bottom: 10px;    
+    border: none;
+    border-radius: 20px;
+    padding: 2%;             /* reduzido de 10% para os cards caberem melhor */
+    flex-wrap: wrap;         /* permite que os cards quebrem de linha em telas menores */
+}
+
+.imagem {
+    width: 80%;             /* ocupa a largura máxima permitida */
+    max-width: 120px;        /* define o tamanho ideal da foto */
+    height: auto;            /* mantém a proporção da foto */
+    margin: 0 auto 10px auto;/* centraliza a imagem no card */
+    display: block;
+}
+
+.card {
+  display: flex;             /* ativa o flex interno do card */
+  flex-direction: column;    /* alinha os itens (imagem, texto, botão) em coluna */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  background-color: lightseagreen;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 20%;              /* define uma largura fixa padrão para cada card */
+}
+.cards{
+    display: flex;             /* ativa o flex para os cards */
+    flex-wrap: wrap;           /* permite que os cards quebrem de linha em telas menores */
+    gap: 20px;                 /* espaço entre os cards */
+    justify-content: center;   /* centraliza os cards horizontalmente */
+    justify-items: left;/* alinha os itens à esquerda dentro do container de cards */
+    width: 100%;              /* garante que o container de cards ocupe toda a largura disponível */
+}
+
+.card ul {
+    list-style-type: none;     /* Remove as bolinhas da lista */
+    padding: 0;                /* Remove o recuo esquerdo padrão */
+    margin: 15px 0;            /* Espaçamento acima e abaixo da lista */
+}
+
+
+.button {
+    display: inline-block;     /* Garante que o comportamento de largura funcione se for link */
+    text-decoration: none;     /* Remove sublinhado caso seja um link <a> */
+    background-color: lightslategray; /* Cor cinza do botão */
+    color: white;              /* Cor do texto interna */
+    border: none;
+    padding: 15px 10px;        /* Deixa o botão alto e menos largo */
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;          /* Dá um espaçamento do texto acima */
+    width: 8%;                /* Deixa o botão menos largo no card */
+    margin-left: auto;         /* Centraliza horizontalmente */
+    margin-right: auto;        /* Centraliza horizontalmente */
+    font-weight: bold;         /* Destaca o texto "Comprar" */
+    transition: background 0.3s; /* Suaviza a mudança de cor no efeito hover */
+}
+
+/* Efeito visual ao passar o mouse */
+.button:hover {
+    background-color: #5a6b7c; /* Escurece um pouco o cinza original */
+}
+/* Rodapé Fixo no Final */
+footer {
+    background-color: lightslategray;
+    color: white;
+    text-align: center;
+    padding: 35px; /* Padding fixo evita distorções em telas menores */
+    border-radius: 15px;
+    gap: 25px;
+    margin-top: auto;
+}
+
+footer h4 {
+    margin: 0;
+}
+
+
+
+
+
+/* ================== Responsividade ============================== */
+
+#celular {
+    display: block;/*Mostra conteúdo para celular.  */
+
+}
+
+#Tablet {
+    display: none;/*Esconde conteúdo para tablet.  */
+
+}
+
+#PC {
+
+    display: none;/* Esconde conteúdo para PC. */
+}
+
+@media (min-width:360px) {
+
+    body {
+     /* Muda fundo para lightslategray.*/
+        background-color: lightslategray;
+
+    }
+/* Esconde Tablet e PC*/
+    #Tablet,
+    #PC {
+ /* mostra só celular.   */
+        display: none;
+    }
+
+}
+
+@media (min-width:768px) {
+   
+    body {
+         /*Fundo vira lightyellow.*/
+        background-color: lightgreen;
+    }
+  /* Esconde celular e PC*/
+    #celular,
+    #PC {
+
+        display: none;
+
+    }
+  /* mostra Tablet.*/
+    #Tablet {
+
+        display: block;
+    }
+}
+
+@media (min-width:1024px) {
+/*Fundo vira thistle (roxo claro).*/
+    body {
+
+        background-color: white
+    }
+   /* Esconde celular e Tablet*/
+    #celular,
+    #Tablet {
+
+        display: none;
+
+    }
+   /*  mostra PC. */ 
+       #PC {
+
+        display: block;
+    }
+
+}

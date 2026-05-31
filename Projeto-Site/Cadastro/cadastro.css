@@ -1,0 +1,180 @@
+nav {
+  background-color: lightslategray;  /* define a cor de fundo do menu */
+  display: flex;                       /* ativa o layout flexível (Flexbox) */
+  justify-content: space-around;       /* distribui os links com espaço ao redor */
+  align-items: center;                 /* alinha os itens verticalmente no centro */
+  padding: 5px;                        /* espaço interno (topo, baixo, esquerda, direita) */
+  border-radius: 10px;                 /* arredonda os cantos do nav */
+
+}
+
+nav a {
+  text-decoration: none;  /* remove o underline dos links */
+  color: white;         /* define a cor do texto */
+  padding: 25px 35px;     /* espaço interno para aumentar a área clicável */
+  text-size-adjust: auto; /* ajusta o tamanho do texto para melhor legibilidade em telas menores */
+
+}
+
+.container {
+  display: flex;            /* ativa o flex */
+  justify-content: center;  /* centraliza horizontalmente */
+  align-items: center;      /* centraliza verticalmente */
+  min-height: 100vh;        /* garante que o container ocupe toda a altura da tela */
+}
+
+.card {
+  background-color: lightslategray;
+  display: flex;            /* ativa o flex */
+  flex-direction: row;      /* FORM + IMAGEM lado a lado */
+  align-items: center;      /* alinha verticalmente */
+  gap: 10px;                /* espaço entre form e imagem */
+  padding: 60px;            /* espaço interno para melhor visualização */
+  border-radius: 15px;      /* bordas arredondadas */
+  justify-content: center;  /* centraliza horizontalmente */
+  top: 15px;                /* posiciona o card um pouco abaixo do topo para evitar sobreposição com o nav */
+  height: auto;             /* altura fixa para manter o layout consistente */
+
+
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form input,
+form button {
+  width: 380px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+
+}
+
+/* IMAGEM */
+#imagem {
+  background-image: url("../Imagem/Ar.webp");
+  background-size: cover;
+  background-position: center;
+  width: 510px;
+  height: 372px;
+  border-radius: 10px;
+}
+
+.campo {
+  display: flex;         /* coloca lado a lado */
+  align-items: left;     /* alinha verticalmente */
+  justify-content: left; /* mantém centralizado na tela */
+  gap: 1px;              /* espaço entre label e input */
+  width: 250%;           /* ocupa toda a largura disponível */
+
+}
+
+input {
+  width: 250%;        /* tamanho dos inputs */
+  max-width: 360px;   /* Limita o crescimento em telas grandes */
+  padding: 8px;       /* espaço interno para melhor usabilidade */
+  border: none;       /* remove borda padrão */
+  border-radius: 5px; /* bordas arredondadas */
+
+
+}
+
+button {
+  width: 100%;                       /* 100% do container, tamanho dos botões */
+  max-width: 360px;                  /* Limita o crescimento em telas grandes */
+  padding: 10px;                     /* espaço interno para melhor usabilidade */
+  background-color: lightskyblue;  /* cor de fundo do botão */
+  border: none;                      /* remove borda padrão */
+  color: blue;                     /* cor do texto do botão */
+  font-size: 16px;                   /* tamanho da fonte */
+  cursor: pointer;                   /* muda o cursor para indicar que é clicável */
+  border-radius: 10px;               /* bordas arredondadas */
+}
+
+/* Rodapé Fixo no Final */
+footer {
+  background-color: lightslategray;
+  color: white;      /* position: fixed; */
+  bottom: 0;
+  top: auto;           /* left: 0; */
+  width: 100%;
+  height: auto;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+footer h6 {
+  margin: 0;
+}
+
+
+
+/* ================== Responsividade ============================== */
+
+#celular {
+  display: block;
+  /*Mostra conteúdo para celular.  */
+
+
+}
+
+#Tablet {
+  display: none;
+  /*Esconde conteúdo para tablet.  */
+
+}
+
+#PC {
+
+  display: none;
+  /* Esconde conteúdo para PC. */
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    /* empilha o formulário e a imagem */
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-image {
+    max-width: 300px;
+    /* reduz tamanho da imagem */
+    margin-top: 20px;
+  }
+
+  input,
+  button {
+    width: 90%;
+    /* ocupa quase toda a largura da tela */
+  }
+
+  nav {
+    flex-direction: column;
+    /* menu em coluna */
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+
+
+  h1 {
+    font-size: 1.4rem;
+    /* título menor */
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
